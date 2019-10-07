@@ -15,7 +15,7 @@
 	<name>mock-service-soap</name>
 	<description>Mock service (SOAP)</description>
 	<packaging>war</packaging>
-	
+
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
@@ -36,12 +36,18 @@
 			<artifactId>spring-boot-starter-web-services</artifactId>
 		</dependency>
 		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
 			<groupId>wsdl4j</groupId>
 			<artifactId>wsdl4j</artifactId>
 		</dependency>
 	</dependencies>
 
 	<build>
+		<finalName>${artifactId}</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
@@ -66,6 +72,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
+
 	</build>
 
 </project>
