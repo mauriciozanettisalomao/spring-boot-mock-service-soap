@@ -1,23 +1,31 @@
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://spring.io/guides/gs-producing-web-service"
-           targetNamespace="http://spring.io/guides/gs-producing-web-service" elementFormDefault="qualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:tns="http://spring.io/guides/gs-producing-web-service"
+	targetNamespace="http://spring.io/guides/gs-producing-web-service"
+	elementFormDefault="qualified">
 
-
-	<xs:element name="changePasswordRequest">
+	<xs:element name="loginNovoFrontRequest">
 		<xs:complexType>
 			<xs:sequence>
 				<xs:element name="login" type="xs:string" />
 				<xs:element name="senhaAtual" type="xs:string" />
-				<xs:element name="novaSenha" type="xs:string" />
-				<xs:element name="confirmacaoNovaSenha" type="xs:string" />
-				<xs:element name="name" type="xs:string" />
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
-	
-	<xs:element name="changePasswordResponse">
+
+	<xs:element name="loginNovoFrontResponse">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element name="password"	type="tns:ArrayOfJavaLangstring_literal" />
+				<xs:element name="CodigoRetorno" type="xs:string" />
+				<xs:element name="DescricaoRetorno" type="xs:string" />
+				<xs:element name="Localizador" type="xs:string" />
+				<xs:element name="Agrupador" type="xs:string" />
+				<xs:element name="Perfil"
+					type="tns:ArrayOfJavaLangstring_literal" />
+				<xs:element name="Empresa" type="xs:string" />
+				<xs:element name="Sistema" type="xs:string" />
+				<xs:element name="AvisoSenha" type="xs:string" />
+				<xs:element name="Nome" type="xs:string" />
+				<xs:element name="Cpf" type="xs:string" />
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
@@ -27,7 +35,8 @@
 			<xs:element maxOccurs="unbounded" minOccurs="0"
 				name="JavaLangstring" nillable="true" type="xs:string" />
 		</xs:sequence>
-	</xs:complexType>	
+	</xs:complexType>
+
 
 
 </xs:schema>

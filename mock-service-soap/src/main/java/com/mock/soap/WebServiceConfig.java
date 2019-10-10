@@ -23,7 +23,7 @@ public class WebServiceConfig {
         return new ServletRegistrationBean(servlet, "/ws/*");
     }
 
-    @Bean(name = "changePassword")
+    @Bean(name = "loginNovoFront")
     public DefaultWsdl11Definition defaultWsdl11Definition(XsdSchema countriesSchema) {
         DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
         wsdl11Definition.setPortTypeName("Port");
