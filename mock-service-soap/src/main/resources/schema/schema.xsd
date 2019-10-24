@@ -13,13 +13,13 @@
 	</xs:element>
 
 	<xs:element name="loginNovoFrontResponse">
-		<xs:complexType>
+		<xs:complexType> 
 			<xs:sequence>
 				<xs:element name="CodigoRetorno" type="xs:string" />
 				<xs:element name="DescricaoRetorno" type="xs:string" />
 				<xs:element name="Localizador" type="xs:string" />
 				<xs:element name="Agrupador" type="xs:string" />
-				<xs:element name="Perfil"
+				<xs:element name="GPerfil"
 					type="tns:ArrayOfJavaLangstring_literal" />
 				<xs:element name="Empresa" type="xs:string" />
 				<xs:element name="Sistema" type="xs:string" />
@@ -33,7 +33,7 @@
 	<xs:complexType name="ArrayOfJavaLangstring_literal">
 		<xs:sequence>
 			<xs:element maxOccurs="unbounded" minOccurs="0"
-				name="JavaLangstring" nillable="true" type="xs:string" />
+				name="Perfil" nillable="true" type="xs:string" />
 		</xs:sequence>
 	</xs:complexType>
 
